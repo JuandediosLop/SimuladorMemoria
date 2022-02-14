@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #162C40;
+}
+
+.proceso{
+    grid-area: proceso;
+    justify-self: start;
+    align-self: flex-end;
+    margin-left: 25px;
+}
+.btnProceso{
+    grid-area: btnproceso;
+    justify-self: center;
+    align-self: center;
+}
+.pagina{
+    grid-area: pagina;
+    justify-self: start;
+    align-self:flex-start;
+    margin-left: 25px;
+}
+
+.procesos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "proceso btnproceso"
+    "pagina btnproceso";
+    row-gap: 10px;
+    width: 45vh;
+    margin: 2rem;
+    grid-area: divProceso;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.2rem;
+}
+
+.procesos select,
+.terminarProcesos select{
+    margin-top: 8px;
+    margin-bottom: 8px; 
+    width: 8.2rem;
+    font-size: 1.2rem;
+    font-family: 'Kanit', sans-serif;
+}
+.btnProceso button, .terminarProcesos button, .btnComprobar{
+    outline: none;
+    border: none;
+    padding: 15px;
+    border-radius: 25px;
+    background-color: #D94E5A;
+    color: #fff;
+    font-weight: bold;
+    font-size: small;
+}
+.btnComprobar{
+    margin-top: 15px;
+}
+
+.texto{
+    grid-area: texto;
+    justify-self: start;
+    align-self: flex-end;
+    margin-left: 25px;
+}
+
+.opcion{
+    grid-area: opcion;
+    justify-self: start;
+    margin-left: 25px;
+}
+.boton{
+    grid-area: boton;
+    justify-self: center;
+    align-self: center;
+}
+.terminarProcesos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "texto boton"
+    "opcion boton";
+    row-gap: 10px;
+    width: 45vh;
+    margin: 2rem;   
+    grid-area: divTerminarProceso;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.2rem;
+}
+
+.terminarProcesos button:hover,
+.procesos button:hover,
+.terminarProcesos select:hover,
+.procesos select:hover, .btnComprobar:hover{
+    cursor: pointer;
+}
+
+.activo{
+    grid-area: activo;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.2rem;
+    justify-self: start;
+    
+    margin-left: 25px;
+}
+.espera{
+    grid-area: espera;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.2rem;
+    justify-self: start;
+    margin-left: 25px;
+}
+.marcoPagina{
+    grid-area: marco;
+    justify-self: start;
+    align-self: center;
+    margin-left: 25px;
+}
+
+.marcoPagina p{
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.2rem;
+ 
+}
+
+.finalizado{
+    grid-area: finalizado;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.2rem;
+    justify-self: start;
+    margin-left: 25px;
+    text-align: center;
+}
+
+.informacion{
+    grid-area: divInformacion;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "activo marco"
+    "espera marco"
+    "finalizado marco";
+    row-gap: 10px;
+    text-align: center;
+}
+
+.contenedor{
+    width: 90vw;
+    height: 817.5px;
+    border-radius: 30px;
+    background: #f6f6f6;
+    border-radius: 25px;
+    border: 15px solid #D94E5A;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
+    margin: auto;
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "divProceso divInformacion"
+    "divTerminarProceso divInformacion";
+    row-gap: 10px;
+}
+
+.tableActivos{
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.2rem;
+    border: #162C40 2px solid;
+    border-collapse: collapse;
+    text-align: center;
+}
+.tableActivos td, .tableActivos th{
+    margin: 10px;
+    padding: 10px;
+}
+
+.tableActivos th{
+    background-color: #D94E5A;
+    color: #fff;
+}

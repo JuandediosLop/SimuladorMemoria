@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador paginación de memoria</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/barras.css">
+ 
+
+</head>
+<body>
+
+    <div class="contenedor">
+        <div class="procesos">
+            <div class="proceso">
+                <p>Proceso</p>
+                <select name="sProceso" id="selectProceso">
+                    <option selected disabled>Selecciona</option>
+                </select>
+            </div>
+            <div class="btnProceso">
+                <button id="btnIniciar">Iniciar Proceso</button>
+            </div>
+            <div class="pagina">
+                <p>Tipo de Pagina</p>
+                <select name="sPagina" id="selectPagina">
+                    <option selected disabled>Selecciona</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="informacion">
+            <div class="activo">
+
+                <p>Procesos Activos</p>
+
+                <table border="1" class="tableActivos" id="tActivos">
+
+                    <tr>
+                  
+                      <th>Procesos</th>
+                      <th>T. Pagina</th>
+                
+                    </tr>
+                  
+                </table>
+
+            </div>
+            <div class="espera">
+                <p>Procesos en Espera</p>
+
+                <table border="1" class="tableActivos" id="tEspera">
+
+                    <tr>
+                  
+                      <th>Procesos</th>
+                      <th>T. Pagina</th>
+                
+                  
+                    </tr>
+                  
+                  
+                </table>
+                <button class="btnComprobar">Comprobar Espacio</button>
+
+            </div>
+            <div class="finalizado">
+                <p>Procesos finalizado</p>
+                
+                <table border="1" class="tableActivos" id="tFin">
+
+                    <tr>
+                  
+                      <th>Procesos</th>
+                      <th>T. Pagina</th>
+                
+                  
+                    </tr>
+
+                  
+                </table>
+            </div>
+
+            <div class="marcoPagina">
+                <p>Marco de pagina</p>
+
+               
+
+            </div>
+        </div>
+
+        <div class="terminarProcesos">
+            <div class="texto">
+                <p>Terminar Proceso</p>
+            </div>
+            <div class="opcion">
+                <select name="sTerminarP" id="sTerminarProceso">
+                    <option selected>Selecciona</option>
+                </select>
+            </div>
+            <div class="boton">
+                <button id="terminar">Terminar Proceso</button>
+            </div>
+
+    
+
+        </div>
+    </div>
+    <script src="./assets/js/datos.js"></script>
+    <script src="./assets/js/marcoPagina.js"></script>
+    <script src="./assets/js/procesosActivos.js"></script>
+    <script src="./assets/js/procesosFinalizar.js"></script>
+    <script src="./assets/js/procesosEspera.js"></script>
+    
+    
+</body>
+</html>
