@@ -14,8 +14,8 @@ btnTerminarProceso.addEventListener("click", () => {
     remover.remove();
     selectTerminarProceso.remove(selectTerminarProceso.selectedIndex);
     insertarProcesosFinalizados();
-
     pruebaTabla();
+    primerOption();
   }
 });
 

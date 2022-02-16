@@ -26,7 +26,7 @@ insertarTipoPagina();
 function insertarProcesos() {
   for (let process of proceso) {
     let contenedorProcesos = `
-      <option value="${process}">${process}</option>
+      <option id="${process}" value="${process}">${process}</option>
     `;
     selectProcesos.innerHTML += contenedorProcesos;
   }
@@ -37,7 +37,7 @@ function insertarProcesos() {
 function insertarTipoPagina() {
   for (let tpagina of tipoPagina) {
     let contenedorPagina = `
-      <option value="${tpagina}">${tpagina}</option>
+      <option id="${tpagina}" value="${tpagina}">${tpagina}</option>
     `;
     selectTipoPagina.innerHTML += contenedorPagina;
   }

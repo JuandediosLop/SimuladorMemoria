@@ -36,6 +36,8 @@ btnIniciarProceso.addEventListener("click", () => {
     contadorMarcoPagina = contadorMarcoPagina + tipoPaginaActual;
     if (contadorMarcoPagina <= maximoMarcoPagina) {
       añadirActivo(procesoActual, tipoPaginaActual);
+      desactivarCampos();
+      primerOption();
     } else {
       contadorMarcoPagina -= tipoPaginaActual;
       alert("Marco de Pagina lleno, lo enviaremos a proceso de espera");
@@ -50,6 +52,8 @@ btnIniciarProceso.addEventListener("click", () => {
     
       `;
       tablaEspera.innerHTML += contenedorProcesoEspera;
+      desactivarCampos();
+      primerOption();
     }
   }
 });
@@ -67,4 +71,14 @@ function añadirActivo(proceso, numero) {
   tablaActivos.innerHTML += contenedorProcesos;
   llenarGrafica(contadorMarcoPagina);
   insertarProcesosParaFinalizar(proceso, numero);
+}
+
+function desactivarCampos() {
+  document.getElementById(`${procesoActual}`).disabled = true;
+}
+
+function primerOption() {
+  document.getElementById("selectedProcess").selected = true;
+  document.getElementById("selectedPage").selected = true;
+  document.getElementById("selectedTP").selected = true;
 }

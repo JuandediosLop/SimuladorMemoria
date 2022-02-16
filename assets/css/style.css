@@ -109,12 +109,32 @@ body{
     
     margin-left: 25px;
 }
+.tituloEspera{
+    grid-area: tituloEspera;
+    align-self: flex-end;
+}
+.tablaEspera{
+    grid-area: tablaEspera;
+
+}
+.botonEspera{
+    grid-area: botonEspera;
+    justify-self: center;
+    align-self: center;
+    margin-left: 2rem;
+}
+
 .espera{
     grid-area: espera;
     font-family: 'Kanit', sans-serif;
     font-size: 1.2rem;
     justify-self: start;
     margin-left: 25px;
+    display: grid;
+    grid-template-areas: 
+    "tituloEspera botonEspera"
+    "tablaEspera botonEspera";
+
 }
 .marcoPagina{
     grid-area: marco;

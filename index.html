@@ -19,7 +19,7 @@
             <div class="proceso">
                 <p>Proceso</p>
                 <select name="sProceso" id="selectProceso">
-                    <option selected disabled>Selecciona</option>
+                    <option id="selectedProcess" selected disabled>Selecciona</option>
                 </select>
             </div>
             <div class="btnProceso">
@@ -28,7 +28,7 @@
             <div class="pagina">
                 <p>Tipo de Pagina</p>
                 <select name="sPagina" id="selectPagina">
-                    <option selected disabled>Selecciona</option>
+                    <option id="selectedPage" selected disabled>Selecciona</option>
                 </select>
             </div>
         </div>
@@ -51,22 +51,26 @@
 
             </div>
             <div class="espera">
-                <p>Procesos en Espera</p>
+                <div class="tituloEspera">
+                    <p>Procesos en Espera</p>
+                </div>
+                <div class="tablaEspera">
+                    <table border="1" class="tableActivos" id="tEspera">
 
-                <table border="1" class="tableActivos" id="tEspera">
-
-                    <tr>
-                  
-                      <th>Procesos</th>
-                      <th>T. Pagina</th>
-                
-                  
-                    </tr>
-                  
-                  
-                </table>
-                <button class="btnComprobar">Comprobar Espacio</button>
-
+                        <tr>
+                    
+                        <th>Procesos</th>
+                        <th>T. Pagina</th>
+                    
+                    
+                        </tr>
+                    
+                    
+                    </table>
+                </div>
+                <div class="botonEspera">                
+                    <button class="btnComprobar">Comprobar Espacio</button>
+                </div>
             </div>
             <div class="finalizado">
                 <p>Procesos finalizado</p>
@@ -99,7 +103,7 @@
             </div>
             <div class="opcion">
                 <select name="sTerminarP" id="sTerminarProceso">
-                    <option selected>Selecciona</option>
+                    <option id="selectedTP" disabled selected>Selecciona</option>
                 </select>
             </div>
             <div class="boton">
